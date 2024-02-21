@@ -1,0 +1,33 @@
+#root {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.titulosFuente {
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fuenteLogo {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.background {
+    background: linear-gradient(90deg, rgba(32,64,59,1) 0%, rgba(120,150,121,1) 15%, rgba(66,94,46,1) 100%);
+};
+
+.colorPrincipal {
+    color: #20403b;
+}
+
+.colorSecundario {
+    color: #789679;
+}
+
+.colorTerciario {
+    color: #425e2e;
+}
