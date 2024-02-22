@@ -8,6 +8,7 @@
     font-family: "Patua One", serif;
     font-weight: 400;
     font-style: normal;
+    color:rgba(32,64,59,1) ;
 }
 
 .fuenteLogo {
@@ -31,3 +32,11 @@
 .colorTerciario {
     color: #425e2e;
 }
+
+#contenBanner{
+    height: 400px;
+  }
+  
+  #imgBanner{
+    height: 100%;
+  }

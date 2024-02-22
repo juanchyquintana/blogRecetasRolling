@@ -1,13 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Container } from "react-bootstrap";
+import Inicio from "./components/pages/Inicio";
 
 function App() {
-
   return (
-    <>
-      <h1>Doña Pirola</h1>
-    </>
-  )
+    <section>
+      <Inicio></Inicio>
+    </section>
+  );
 }
 
-export default App
+export default App;
