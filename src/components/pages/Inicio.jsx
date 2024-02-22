@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import banner from "../../assets/banner.png";
 import pastas from "../../assets/lasagna.jpg";
 import ensaladas from "../../assets/ensalada.jpg";
@@ -6,6 +6,9 @@ import salsas from "../../assets/salsas.jpg";
 import postres from "../../assets/tarta.jpg";
 import carnes from "../../assets/carne.jpg";
 import entrada from "../../assets/entrada.jpg";
+import nuevaReceta1 from "../../assets/nuevaReceta1.jpg";
+import nuevaReceta2 from "../../assets/nuevaReceta2.jpg";
+import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";
 const Inicio = () => {
   return (
     <section>
@@ -21,7 +24,10 @@ const Inicio = () => {
       <Container>
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">CATEGORIAS POPULARES</h3>
-          <a href="Otras categorías" className="link-secondary link-informacion mt-5 fw-bold h5">
+          <a
+            href="Otras categorías"
+            className="link-secondary link-informacion mt-5 fw-bold h5"
+          >
             Otras categorías
           </a>
         </div>
@@ -100,36 +106,35 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container className="mb-5">
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">Nuevas Recetas</h3>
         </div>
         <hr />
-        <Carousel fade>
-      <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+        <section className="recetas">
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="img-fluid"
+                src={nuevaReceta1}
+                alt="Nuevas recetas comida"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="img-fluid" src={nuevaReceta3} alt="postres" />
+            </Carousel.Item>
+          </Carousel>
+        </section>
+      </Container>
+      <Container>
+        <div className="d-flex justify-content-between align-items-center">
+          <h3 className="my-4 mt-5 titulosFuente">Nuestros Chefts</h3>
+        </div>
+          <h5>"Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado a compartir las mejores recetas y técnicas de cocina contigo."</h5>
+        <hr />
       </Container>
     </section>
   );
