@@ -12,7 +12,6 @@ import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";
 import cheft1 from "../../assets/cheft1.jpeg";
 import cheft2 from "../../assets/cheft2.jpeg";
 import cheft3 from "../../assets/cheft3.jpeg";
-import donaPirola from "../../assets/logoDonaPirola.png";
 
 const Inicio = () => {
   return (
@@ -27,7 +26,7 @@ const Inicio = () => {
         />
       </div>
       <Container>
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-center categoria">
           <h3 className="my-4 mt-5 titulosFuente">CATEGORIAS POPULARES</h3>
           <a
             href="Otras categorías"

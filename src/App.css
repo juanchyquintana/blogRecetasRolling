@@ -57,3 +57,13 @@
   .agradecimientoPirola{
     background-color: #789679;
   }
+
+
+  @media (min-width: 280px) and (max-width: 300px){
+    .categoria h3{
+      font-size: 16px;
+    }
+    a.link-informacion {
+        font-size: 10px;
+      }
+  }
