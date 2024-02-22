@@ -34,9 +34,18 @@
 }
 
 #contenBanner{
-    height: 400px;
+    height:auto;
   }
   
   #imgBanner{
-    height: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .card-body{
+    background-color: #20403b;
+  }
+  .link-informacion{
+    text-decoration: dashed;
+    color: #20403b;
   }
