@@ -49,10 +49,11 @@
     text-decoration: dashed;
     color: #20403b;
   }
-  .recetas{
-    height: 300px;
-  }
+  
   .cheft-card:hover{
     transition: transform 0.3s;
     transform: scale(1.1);
+  }
+  .agradecimientoPirola{
+    background-color: #789679;
   }

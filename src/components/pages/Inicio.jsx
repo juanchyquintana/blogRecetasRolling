@@ -12,6 +12,7 @@ import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";
 import cheft1 from "../../assets/cheft1.jpeg";
 import cheft2 from "../../assets/cheft2.jpeg";
 import cheft3 from "../../assets/cheft3.jpeg";
+import donaPirola from "../../assets/logoDonaPirola.png";
 
 const Inicio = () => {
   return (
@@ -110,12 +111,12 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
-      <Container className="mb-lg-5">
+      <Container className="mb-md-2 mb-lg-5">
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">Nuevas Recetas</h3>
         </div>
         <hr />
-        <section className="recetas">
+        <section>
           <Carousel>
             <Carousel.Item>
               <img
@@ -137,35 +138,54 @@ const Inicio = () => {
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">Nuestros Chefts</h3>
         </div>
-          <h5>"Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado a compartir las mejores recetas y técnicas de cocina contigo."</h5>
+        <h5>
+          "Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado
+          a compartir las mejores recetas y técnicas de cocina contigo."
+        </h5>
         <hr />
-      <Row className="mb-4 mt-5 ms-4">
+        <Row className="mb-4 mt-5 ms-4">
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
-              <Card.Img variant="top" src={cheft1} alt="sheyla"/>
+              <Card.Img variant="top" src={cheft1} alt="sheyla" />
               <Card.Body className="card-body">
-                <Card.Title className="text-light text">Sheyla Astorga</Card.Title>
+                <Card.Title className="text-light text">
+                  Sheyla Astorga
+                </Card.Title>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
-              <Card.Img variant="top" src={cheft2} alt="juan"/>
+              <Card.Img variant="top" src={cheft2} alt="juan" />
               <Card.Body>
-                <Card.Title className="text-light text">Juan Diego Quintana</Card.Title>
+                <Card.Title className="text-light text">
+                  Juan Diego Quintana
+                </Card.Title>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
-              <Card.Img variant="top" src={cheft3}  alt="natalia"/>
+              <Card.Img variant="top" src={cheft3} alt="natalia" />
               <Card.Body>
-                <Card.Title className="text-light text">Natalia Morales</Card.Title>
+                <Card.Title className="text-light text">
+                  Natalia Morales
+                </Card.Title>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
+      <section className="d-flex flex-column justify-content-center align-items-center mt-5 agradecimientoPirola mb-5 p-4 text-light">
+        <h5 className="text-center">
+          "¡Agradezco sinceramente tu visita a nuestra página! Estoy emocionada
+          de compartir contigo mis recetas más queridas. Cada plato está lleno
+          de amor y tradición, y espero que encuentres inspiración para tus
+          propias creaciones culinarias. ¡Gracias por ser parte de nuestra
+          comunidad gastronómica! Espero que disfrutes explorando y cocinando
+          conmigo. ¡Bienvenido a mi cocina virtual!"
+        </h5>
+      </section>
     </section>
   );
 };
