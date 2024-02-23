@@ -1,8 +1,15 @@
 #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
     font-style: italic;
 }
+
+.mainPage {
+    flex-grow: 1;
+  }
 
 .titulosFuente {
     font-family: "Patua One", serif;
@@ -30,4 +37,8 @@
 
 .colorTerciario {
     color: #425e2e;
+}
+
+.bgNavFooter {
+    background-color: #20403b;
 }
