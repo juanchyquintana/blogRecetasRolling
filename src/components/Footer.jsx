@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer
       className="shadow mt-5 py-5 footerBorder bgNavFooter"
-      data-bs-theme="dark"
     >
       <section className="container">
         <div className="row">

@@ -17,16 +17,16 @@ const Header = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-center">
-            <NavLink end className="nav-link colorSecundario" to="/">
+            <NavLink className="nav-link colorSecundario" to="/">
               Inicio
             </NavLink>
-            <NavLink end className="nav-link colorSecundario" to="/administrador">
+            <NavLink className="nav-link colorSecundario" to="/administrador">
               Administrador
             </NavLink>
-            <NavLink end className="nav-link colorSecundario" to="/registrarse">
+            <NavLink className="nav-link colorSecundario" to="/registrarse">
               Registro
             </NavLink>
-            <NavLink end className="nav-link colorSecundario" to="/login">
+            <NavLink className="nav-link colorSecundario" to="/login">
               Login
             </NavLink>
           </Nav>
