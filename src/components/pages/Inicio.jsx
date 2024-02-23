@@ -19,7 +19,7 @@ const Inicio = () => {
       <div id="contenBanner" style={{ maxWidth: "100%" }}>
         <img
           src={banner}
-          className="img-fluid"
+          className="img-fluid img-large"
           alt="banner"
           id="imgBanner"
           style={{ width: "100%", objectFit: "cover" }}
@@ -39,7 +39,7 @@ const Inicio = () => {
         <hr />
         <Row className="mb-4 mt-5 ms-4">
           <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-5">
+            <Card style={{ width: "80%" }} className="mb-5 ">
               <Card.Img variant="top" src={pastas} />
               <Card.Body className="card-body">
                 <Card.Title className="text-light text">Pastas</Card.Title>
@@ -116,19 +116,34 @@ const Inicio = () => {
         </div>
         <hr />
         <section>
-          <Carousel>
+          <Carousel className="carrusel">
             <Carousel.Item>
               <img
                 className="img-fluid"
                 src={nuevaReceta1}
                 alt="Nuevas recetas comida"
               />
+              <Carousel.Caption className="mb-3">
+                <Button variant="success" className="boton-carrusel text-light">
+                  Ver Recetas
+                </Button>
+              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
+              <Carousel.Caption className="mb-3">
+                <Button variant="success" className="boton-carrusel text-light">
+                  Ver Recetas
+                </Button>
+              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta3} alt="postres" />
+              <Carousel.Caption className="mb-3">
+                <Button variant="success" className="boton-carrusel text-light">
+                  Ver Recetas
+                </Button>
+              </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </section>

@@ -58,12 +58,35 @@
     background-color: #789679;
   }
 
+  .boton-carrusel{
+    background-color: #789679;
+  
+  }
 
-  @media (min-width: 280px) and (max-width: 300px){
+
+  #contenBanner .img-large {
+    display: block; 
+}
+
+#contenBanner .img-small {
+    display: none;
+}
+
+  @media (min-width: 280px) and (max-width: 500px){
     .categoria h3{
       font-size: 16px;
     }
     a.link-informacion {
         font-size: 10px;
       }
+     
+      .boton-carrusel{
+        display: none;
+      
+      }
+
+      .carrusel .img-fluid {
+        height: 180px;
+        
+    }
   }
