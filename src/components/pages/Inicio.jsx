@@ -153,8 +153,9 @@ const Inicio = () => {
           <h3 className="my-4 mt-5 titulosFuente">Nuestros Chefts</h3>
         </div>
         <h5>
-          "Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado
-          a compartir las mejores recetas y técnicas de cocina contigo."
+          {
+            "Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado a compartir las mejores recetas y técnicas de cocina contigo."
+          }
         </h5>
         <hr />
         <Row className="mb-4 mt-5 ms-4">
@@ -192,12 +193,9 @@ const Inicio = () => {
       </Container>
       <section className="d-flex flex-column justify-content-center align-items-center mt-5 agradecimientoPirola mb-5 p-4 text-light">
         <h5 className="text-center">
-          "¡Agradezco sinceramente tu visita a nuestra página! Estoy emocionada
-          de compartir contigo mis recetas más queridas. Cada plato está lleno
-          de amor y tradición, y espero que encuentres inspiración para tus
-          propias creaciones culinarias. ¡Gracias por ser parte de nuestra
-          comunidad gastronómica! Espero que disfrutes explorando y cocinando
-          conmigo. ¡Bienvenido a mi cocina virtual!"
+          {
+            "¡Agradezco sinceramente tu visita a nuestra página! Estoy emocionada de compartir contigo mis recetas más queridas. Cada plato está lleno de amor y tradición, y espero que encuentres inspiración para tus propias creaciones culinarias. ¡Gracias por ser parte de nuestra comunidad gastronómica! Espero que disfrutes explorando y cocinando conmigo. ¡Bienvenido a mi cocina virtual!"
+          }
         </h5>
       </section>
     </section>

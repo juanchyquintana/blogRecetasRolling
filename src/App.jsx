@@ -1,13 +1,16 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Inicio from "./components/pages/Inicio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Container } from "react-bootstrap";
-import Inicio from "./components/pages/Inicio";
 
 function App() {
   return (
-    <section>
+    <>
+      <Header />
       <Inicio></Inicio>
-    </section>
+      <Footer />
+    </>
   );
 }
 
