@@ -8,6 +8,7 @@
     font-family: "Patua One", serif;
     font-weight: 400;
     font-style: normal;
+    color:rgba(32,64,59,1) ;
 }
 
 .fuenteLogo {
@@ -31,3 +32,61 @@
 .colorTerciario {
     color: #425e2e;
 }
+
+#contenBanner{
+    height:auto;
+  }
+  
+  #imgBanner{
+    height: auto;
+    max-width: 100%;
+  }
+
+  .card-body{
+    background-color: #20403b;
+  }
+  .link-informacion{
+    text-decoration: dashed;
+    color: #20403b;
+  }
+  
+  .cheft-card:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+  }
+  .agradecimientoPirola{
+    background-color: #789679;
+  }
+
+  .boton-carrusel{
+    background-color: #789679;
+  
+  }
+
+
+  #contenBanner .img-large {
+    display: block; 
+}
+
+#contenBanner .img-small {
+    display: none;
+}
+
+  @media (min-width: 280px) and (max-width: 500px){
+    .categoria h3{
+      font-size: 16px;
+    }
+    a.link-informacion {
+        font-size: 10px;
+      }
+     
+      .boton-carrusel{
+        display: none;
+      
+      }
+
+      .carrusel .img-fluid {
+        height: 180px;
+        
+    }
+  }
