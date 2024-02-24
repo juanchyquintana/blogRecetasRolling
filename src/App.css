@@ -78,24 +78,22 @@
   background-color: #789679;
 }
 
-#contenBanner .img-large {
-  display: block;
-}
-
-#contenBanner .img-small {
-  display: none;
-}
 
 .bannerProducto{
   background-color: #20403b;
 }
 
 .bannerProducto h2 {
-  margin-top: 2em;
+  margin-top: 1em;
 }
+
 .bannerProducto p{
   font-size: 18px;
   padding: 1em;
+}
+
+.listaIngredientes li{
+font-size: 20px;
 }
 
 @media (min-width: 280px) and (max-width: 500px) {
@@ -112,5 +110,9 @@
 
   .carrusel .img-fluid {
     height: 180px;
+  }
+  .bannerProducto p{
+    font-size: 18px;
+    padding: 0;
   }
 }
