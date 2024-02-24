@@ -11,11 +11,13 @@ const DetalleProducto = () => {
           <h2 className="text-light titulosFuente">{"Lasagna Boloñesa"}</h2>
           <p className="text-light">
             "Aprende a preparar esta receta de Lasagna a la boloñesa"
-          </p>
-          <p className="text-light">
             Un plato italiano clásico conocido por sus capas de pasta
             intercaladas con una rica mezcla de carne y salsas.
           </p>
+          {/* <p className="text-light">
+            Un plato italiano clásico conocido por sus capas de pasta
+            intercaladas con una rica mezcla de carne y salsas.
+          </p> */}
         </div>
         <img src={lasagna} alt="lasagna" className="img-fluid w-50 " />
       </Container>
