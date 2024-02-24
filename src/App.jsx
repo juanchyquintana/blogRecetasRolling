@@ -12,15 +12,15 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+        <Route exact path='/' element={<Inicio></Inicio>}></Route>
           <Route
             exact
-            path="/"
+            path="/detalleProducto"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
-      {/* <Inicio></Inicio> */}
     </>
   );
 }
