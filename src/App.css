@@ -78,12 +78,22 @@
   background-color: #789679;
 }
 
-#contenBanner .img-large {
-  display: block;
+
+.bannerProducto{
+  background-color: #20403b;
 }
 
-#contenBanner .img-small {
-  display: none;
+.bannerProducto h2 {
+  margin-top: 2em;
+}
+
+.bannerProducto p{
+  font-size: 17px;
+  padding: 1em;
+}
+
+.listaIngredientes li{
+font-size: 20px;
 }
 
 @media (min-width: 280px) and (max-width: 500px) {
@@ -100,5 +110,22 @@
 
   .carrusel .img-fluid {
     height: 180px;
+  }
+  .bannerProducto p{
+    font-size: 10px;
+    padding: 1;
+  }
+  .listaIngredientes li{
+    font-size: 15px;
+    }
+
+  .listaIngredientes h3{
+    font-size:20px ;
+  }
+}
+@media (min-width: 500px) and (max-width: 770px) {
+  .bannerProducto p{
+    font-size: 15px;
+    padding: 1;
   }
 }
