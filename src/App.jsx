@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NuevoProducto from "./components/pages/NuevoProducto";
 import DetalleProducto from "./components/pages/DetalleProducto";
-
+import Administrador from "./components/pages/Administrador";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
             path="/detalleProducto"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
           <Route exact path="/administrador/crear-producto" element={<NuevoProducto />} />
         </Routes>
         <Footer />
