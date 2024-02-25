@@ -10,7 +10,7 @@ const Administrador = () => {
           <i class="bi bi-file-earmark-plus"></i>
         </Button>
       </div>
-      <Table striped bordered hover className="mt-4 text-center">
+      <Table responsive striped bordered hover className="mt-4 text-center">
         <thead>
           <tr>
             <th>Código</th>

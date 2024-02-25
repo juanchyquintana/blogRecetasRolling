@@ -11,10 +11,10 @@ const ItemTablaRecetas = () => {
       <td>preparacion</td>
       <td>categoria</td>
       <td>
-        <Button variant="warning" className="me-2">
+        <Button variant="warning" className="py-1 m-1">
           <i class="bi bi-pencil-square"></i>
         </Button>
-        <Button variant="danger">
+        <Button variant="danger" className="py-1 m-1">
           <i class="bi bi-trash3"></i>
         </Button>
       </td>
