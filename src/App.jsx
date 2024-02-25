@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Inicio from "./components/pages/Inicio";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NuevoProducto from "./components/pages/NuevoProducto";

@@ -6,7 +6,9 @@ const Administrador = () => {
     <section className="container my-4">
       <div className="d-flex justify-content-between align-items-start">
         <h1 className="mb-3">Recetas disponibles</h1>
-        <Button variant="primary p-2">+</Button>
+        <Button variant="primary p-2">
+          <i class="bi bi-file-earmark-plus"></i>
+        </Button>
       </div>
       <Table striped bordered hover className="mt-4">
         <thead>
@@ -18,6 +20,7 @@ const Administrador = () => {
             <th>Ingredientes</th>
             <th>Preparación</th>
             <th>Categoria</th>
+            <th>Opciones</th>
           </tr>
         </thead>
         <tbody>
