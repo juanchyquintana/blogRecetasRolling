@@ -24,7 +24,7 @@ const Administrador = () => {
     <section className="container my-4">
       <div className="d-flex justify-content-between align-items-start">
         <h1 className="mb-3">Recetas disponibles</h1>
-        <Link className="btn btn-primary" to="/nuevoProducto">
+        <Link className="btn btn-primary" to="/administrador/crear-producto">
           <i className="bi bi-pencil-square"></i>
         </Link>
       </div>

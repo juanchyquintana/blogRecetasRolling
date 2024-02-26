@@ -2,6 +2,7 @@ import { Button, Container, Form } from "react-bootstrap";
 // import { crearProducto } from "../../helpers/queries";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { crearRecetaAPI } from "../../helpers/queries";
 
 const NuevoProducto = () => {
   const {
@@ -11,20 +12,20 @@ const NuevoProducto = () => {
     reset,
   } = useForm();
 
-  const productoValidado = async (producto) => {
-    
-
+  const productoValidado = async (receta) => {
+    console.log(receta);
+    const respuesta = await crearRecetaAPI(receta);
     if (respuesta.status === 201) {
       Swal.fire({
         title: "Producto Creado",
-        text: `El ${nombreProducto} se guardó correctamente`,
+        text: `El ${receta.nombreReceta} se guardó correctamente`,
         icon: "success",
       });
       reset();
     } else {
       Swal.fire({
         title: "Error al Crear el Producto",
-        text: `El ${nombreProducto} no pudo ser cargado. Intente nuevamente`,
+        text: `El ${receta.nombreReceta} no pudo ser cargado. Intente nuevamente`,
         icon: "error",
       });
     }
@@ -34,7 +35,7 @@ const NuevoProducto = () => {
     <div>
       <Container>
         <section className=" bg-white shadow rounded-5  p-3 my-4">
-          <Form onSubmit={handleSubmit()}>
+          <Form onSubmit={handleSubmit(productoValidado)}>
             <Form.Group className="mb-3">
               <Form.Label className="fw-bolder fst-normal">
                 Nombre de la Receta
