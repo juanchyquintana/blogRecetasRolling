@@ -1,5 +1,5 @@
 import { Button, Container, Form } from "react-bootstrap";
-import { crearProducto } from "../../helpers/queries";
+import { crearRecetaAPI } from "../../helpers/queries.js";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
@@ -11,20 +11,21 @@ const NuevoProducto = () => {
     reset,
   } = useForm();
 
-  const productoValidado = async (producto) => {
-    
+  const productoValidado = async (receta) => {
+    const respuesta = await crearRecetaAPI(receta);
+    const { nombreReceta } = respuesta;
 
     if (respuesta.status === 201) {
       Swal.fire({
         title: "Producto Creado",
-        text: `El ${nombreProducto} se guardó correctamente`,
+        text: `El ${nombreReceta} se guardó correctamente`,
         icon: "success",
       });
       reset();
     } else {
       Swal.fire({
         title: "Error al Crear el Producto",
-        text: `El ${nombreProducto} no pudo ser cargado. Intente nuevamente`,
+        text: `El ${nombreReceta} no pudo ser cargado. Intente nuevamente`,
         icon: "error",
       });
     }
@@ -34,7 +35,7 @@ const NuevoProducto = () => {
     <div>
       <Container>
         <section className=" bg-white shadow rounded-5  p-3 my-4">
-          <Form onSubmit={handleSubmit()}>
+          <Form onSubmit={handleSubmit(productoValidado)}>
             <Form.Group className="mb-3">
               <Form.Label className="fw-bolder fst-normal">
                 Nombre de la Receta
@@ -96,7 +97,7 @@ const NuevoProducto = () => {
               <Form.Control
                 type="url"
                 placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
-                {...register("url", {
+                {...register("imagen", {
                   required: "La Imagen es obligatoria",
                   pattern: {
                     value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
@@ -106,7 +107,9 @@ const NuevoProducto = () => {
               />
             </Form.Group>
 
-            <Form.Text className="text-danger">{errors.url?.message}</Form.Text>
+            <Form.Text className="text-danger">
+              {errors.imagen?.message}
+            </Form.Text>
 
             <Form.Group className="mb-3">
               <Form.Label className="fw-bolder fst-normal">

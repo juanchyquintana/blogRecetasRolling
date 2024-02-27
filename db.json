@@ -1,0 +1,22 @@
+{
+  "recetas": [
+    {
+      "id": "1",
+      "nombreReceta": "lasagna",
+      "imagen": "../src/assets/lasagna.jpg",
+      "descripcion": "receta de Lasagna a la boloñesa",
+      "ingredientes": "Placas de lasaña,carne molida,salsa de tomate,sal y pimienta",
+      "preparacion": "Cocina la carne con cebolla y ajo, prepara la salsa de tomate. Intercala capas de placas de lasaña, carne, salsa de tomate y mezcla de quesos. Hornea hasta que esté dorada y burbujeante",
+      "categoria": "Plato Principal"
+    },
+    {
+      "id": "2",
+      "nombreReceta": "Ensalada Fresca",
+      "imagen": "../src/assets/ensalada.jpg",
+      "descripcion": "Receta de ensalada fresca y nutritiva",
+      "ingredientes": "Hojas verdes, tomates cherry, pepino, aguacate, aderezo, queso feta (opcional), nueces (opcional)",
+      "preparacion": "Lava y corta las hojas verdes. Añade tomates cherry, pepino y aguacate. Incorpora el aderezo y mezcla suavemente. Opcional: agrega queso feta o nueces para más sabor y textura. Sirve y disfruta tu ensalada refrescante.",
+      "categoria": "vegetariano"
+    }
+  ]
+}
