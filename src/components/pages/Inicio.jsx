@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import banner from "../../assets/banner.png";
 import pastas from "../../assets/lasagna.jpg";
 import ensaladas from "../../assets/ensalada.jpg";
@@ -12,6 +12,7 @@ import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";
 import cheft1 from "../../assets/cheft1.jpeg";
 import cheft2 from "../../assets/cheft2.jpeg";
 import cheft3 from "../../assets/cheft3.jpeg";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -28,13 +29,13 @@ const Inicio = () => {
 
       <Container>
         <div className="d-flex justify-content-between align-items-center categoria">
-          <h3 className="my-4 mt-5 titulosFuente">CATEGORIAS POPULARES</h3>
-          <a
-            href="Otras categorías"
+          <h3 className="my-4 mt-5 titulosFuente">RECETAS POPULARES</h3>
+          <Link
+            to={"/recetas"}
             className="link-secondary link-informacion mt-5 fw-bold h5"
           >
-            Otras categorías
-          </a>
+            Otras recetas
+          </Link>
         </div>
 
         <hr />
@@ -46,7 +47,7 @@ const Inicio = () => {
               <Card.Body className="card-body">
                 <Card.Title className="text-light text">Pastas</Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                  <Link className="btn btn-light" to={`/categorias/pastas`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -58,7 +59,7 @@ const Inicio = () => {
               <Card.Body>
                 <Card.Title className="text-light text">Ensaladas</Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                  <Link className="btn btn-light" to={`/categorias/ensaladas`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -70,7 +71,7 @@ const Inicio = () => {
               <Card.Body>
                 <Card.Title className="text-light text">Salsas</Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                <Link className="btn btn-light" to={`/categorias/salsas`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -82,7 +83,7 @@ const Inicio = () => {
               <Card.Body>
                 <Card.Title className="text-light text">Postres</Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                <Link className="btn btn-light" to={`/categorias/postres`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -96,7 +97,7 @@ const Inicio = () => {
                   Platos/Carne
                 </Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                <Link className="btn btn-light" to={`/categorias/carne`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -110,7 +111,7 @@ const Inicio = () => {
                   Aperitivos y Entradas
                 </Card.Title>
                 <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
+                  <Link className="btn btn-light" to={`/categorias/entradas-aperitivos`} >Ver más</Link>
                 </Card.Footer>
               </Card.Body>
             </Card>
@@ -134,31 +135,32 @@ const Inicio = () => {
                 alt="Nuevas recetas comida"
               />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta3} alt="postres" />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </section>
+        
       </Container>
 
       <Container>

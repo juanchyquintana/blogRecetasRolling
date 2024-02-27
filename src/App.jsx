@@ -5,6 +5,7 @@ import Administrador from "./components/pages/Administrador";
 import NuevoProducto from "./components/pages/NuevoProducto";
 import DetalleProducto from "./components/pages/DetalleProducto";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Recetas from "./components/pages/receta/Recetas";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
             path="/administrador/editar-producto/:id"
             element={<NuevoProducto editar={true} titulo="Editar Receta" />}
           />
-          {/* <Route path="*" element={<Error404 />} /> */}
+          <Route exact path="/recetas" element={<Recetas />} />
+          <Route exact path="/recetas/:id" element={<DetalleProducto />} />
+          {/* <Route path="*" element={<DetalleProducto />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

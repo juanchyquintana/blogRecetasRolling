@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="bgNavFooter shadow">
       <Container>
-        <Navbar.Brand as={Link}>
+        <Navbar.Brand as={Link} to={'/'}>
           <img
             src={logoPriola}
             alt="Logo Coffe"
@@ -18,20 +18,20 @@ const Header = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-center">
-            <NavLink end className="nav-link colorSecundario" to="/">
+            <NavLink end className="nav-link text-white" to="/">
               Inicio
+            </NavLink>
+            <NavLink end className="nav-link text-white" to="/recetas">
+              Recetas
             </NavLink>
             <NavLink
               end
-              className="nav-link colorSecundario"
+              className="nav-link text-white"
               to="/administrador"
             >
               Administrador
             </NavLink>
-            <NavLink end className="nav-link colorSecundario" to="/registrarse">
-              Registro
-            </NavLink>
-            <NavLink end className="nav-link colorSecundario" to="/login">
+            <NavLink end className="nav-link text-white" to="/login">
               Login
             </NavLink>
           </Nav>
