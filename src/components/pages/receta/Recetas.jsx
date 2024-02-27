@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { leerRecetasAPI } from "../../../helpers/queries.js";
 import ItemRecetas from "./ItemRecetas";
 
@@ -26,14 +26,16 @@ const Recetas = () => {
       }
       
   return (
-    <Row className="mb-4 mt-5 ms-4">
-        {recetas.map(receta => (
-            <ItemRecetas 
-                key={receta.id}
-                receta={receta}
-            />
-        ))}
-    </Row>
+    <Container>
+      <Row className="mb-4 mt-5 ms-4">
+          {recetas.map(receta => (
+              <ItemRecetas 
+                  key={receta.id}
+                  receta={receta}
+              />
+          ))}
+      </Row>
+    </Container>
   );
 };
 
