@@ -18,6 +18,10 @@
   color: rgba(32, 64, 59, 1);
 }
 
+#imagenCard {
+  height: 200px;
+}
+
 .fuenteLogo {
   font-family: "Satisfy", cursive;
   font-weight: 400;

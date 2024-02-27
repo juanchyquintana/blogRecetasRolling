@@ -1,10 +1,7 @@
-import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import banner from "../../assets/banner.png";
 import pastas from "../../assets/lasagna.jpg";
 import ensaladas from "../../assets/ensalada.jpg";
-import salsas from "../../assets/salsas.jpg";
-import postres from "../../assets/tarta.jpg";
-import carnes from "../../assets/carne.jpg";
 import entrada from "../../assets/entrada.jpg";
 import nuevaReceta1 from "../../assets/nuevaReceta1.jpg";
 import nuevaReceta2 from "../../assets/nuevaReceta2.jpg";
@@ -12,8 +9,28 @@ import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";
 import cheft1 from "../../assets/cheft1.jpeg";
 import cheft2 from "../../assets/cheft2.jpeg";
 import cheft3 from "../../assets/cheft3.jpeg";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { leerRecetasAPI } from "../../helpers/queries";
+import ItemRecetas from "./receta/ItemRecetas";
 
 const Inicio = () => {
+
+  const [recetas, setRecetas] = useState([]);
+
+  useEffect(() => {
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async () => {
+    try {
+      const respuesta = await leerRecetasAPI();
+      setRecetas(respuesta);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section>
       <div id="contenBanner" style={{ maxWidth: "100%" }}>
@@ -28,93 +45,24 @@ const Inicio = () => {
 
       <Container>
         <div className="d-flex justify-content-between align-items-center categoria">
-          <h3 className="my-4 mt-5 titulosFuente">CATEGORIAS POPULARES</h3>
-          <a
-            href="Otras categorías"
+          <h3 className="my-4 mt-5 titulosFuente">RECETAS POPULARES</h3>
+          <Link
+            to={"/recetas"}
             className="link-secondary link-informacion mt-5 fw-bold h5"
           >
-            Otras categorías
-          </a>
+            Otras recetas
+          </Link>
         </div>
 
         <hr />
 
         <Row className="mb-4 mt-5 ms-4">
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-5 ">
-              <Card.Img variant="top" src={pastas} />
-              <Card.Body className="card-body">
-                <Card.Title className="text-light text">Pastas</Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-3">
-              <Card.Img variant="top" src={ensaladas} />
-              <Card.Body>
-                <Card.Title className="text-light text">Ensaladas</Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-3">
-              <Card.Img variant="top" src={salsas} />
-              <Card.Body>
-                <Card.Title className="text-light text">Salsas</Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-3">
-              <Card.Img variant="top" src={postres} />
-              <Card.Body>
-                <Card.Title className="text-light text">Postres</Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-3">
-              <Card.Img variant="top" src={carnes} />
-              <Card.Body>
-                <Card.Title className="text-light text">
-                  Platos/Carne
-                </Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={6} lg={4}>
-            <Card style={{ width: "80%" }} className="mb-3">
-              <Card.Img variant="top" src={entrada} />
-              <Card.Body>
-                <Card.Title className="text-light text">
-                  Aperitivos y Entradas
-                </Card.Title>
-                <Card.Footer className="d-flex justify-content-center">
-                  <Button className="btn btn-light">Ver más</Button>
-                </Card.Footer>
-              </Card.Body>
-            </Card>
-          </Col>
+            {recetas.slice(0, 3).map( receta => (
+              <ItemRecetas 
+                key={receta.id}
+                receta={receta}
+              />
+            ))}
         </Row>
       </Container>
 
@@ -134,31 +82,32 @@ const Inicio = () => {
                 alt="Nuevas recetas comida"
               />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta3} alt="postres" />
               <Carousel.Caption className="mb-3">
-                <Button variant="success" className="boton-carrusel text-light">
+                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
                   Ver Recetas
-                </Button>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </section>
+        
       </Container>
 
       <Container>
