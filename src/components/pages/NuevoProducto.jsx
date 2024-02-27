@@ -2,8 +2,9 @@ import { Button, Container, Form } from "react-bootstrap";
 import { crearRecetaAPI } from "../../helpers/queries.js";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
-const NuevoProducto = () => {
+const NuevoProducto = ({ editar, titulo }) => {
   const {
     register,
     handleSubmit,
@@ -11,29 +12,52 @@ const NuevoProducto = () => {
     reset,
   } = useForm();
 
+  const navegacion = useNavigate();
+
   const productoValidado = async (receta) => {
     const respuesta = await crearRecetaAPI(receta);
     const { nombreReceta } = respuesta;
 
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "Producto Creado",
-        text: `El ${nombreReceta} se guardó correctamente`,
-        icon: "success",
-      });
-      reset();
+    if (editar) {
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "Producto Editado",
+          text: `El ${nombreReceta} se editó correctamente`,
+          icon: "success",
+        });
+
+        navegacion("/administrador");
+      } else {
+        Swal.fire({
+          title: "Error al Editar el Producto",
+          text: `El ${nombreReceta} no pudo se puedo editar. Intente nuevamente`,
+          icon: "error",
+        });
+      }
     } else {
-      Swal.fire({
-        title: "Error al Crear el Producto",
-        text: `El ${nombreReceta} no pudo ser cargado. Intente nuevamente`,
-        icon: "error",
-      });
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Producto Creado",
+          text: `El ${nombreReceta} se guardó correctamente`,
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Error al Crear el Producto",
+          text: `El ${nombreReceta} no pudo ser cargado. Intente nuevamente`,
+          icon: "error",
+        });
+      }
     }
   };
 
   return (
     <div>
       <Container>
+        <h2 className="display-4 mt-5">{titulo}</h2>
+        <hr />
+
         <section className=" bg-white shadow rounded-5  p-3 my-4">
           <Form onSubmit={handleSubmit(productoValidado)}>
             <Form.Group className="mb-3">

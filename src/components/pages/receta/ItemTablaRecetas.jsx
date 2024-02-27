@@ -2,23 +2,25 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ItemTablaRecetas = ({ receta }) => {
+
+  const { id, nombreReceta, imagen, descripcion, ingredientes, preparacion, categoria} = receta;
   return (
     <tr>
-      <td>{receta.id}</td>
-      <td>{receta.nombreReceta}</td>
+      <td>{id}</td>
+      <td>{nombreReceta}</td>
       <td>
         <img
-          src={receta.imagen}
+          src={imagen}
           className="img-thumbnail"
-          alt={receta.nombreReceta}
+          alt={nombreReceta}
         ></img>
       </td>
-      <td>{receta.descripcion}</td>
-      <td>{receta.ingredientes}</td>
-      <td>{receta.preparacion}</td>
-      <td>{receta.categoria}</td>
+      <td>{descripcion}</td>
+      <td>{ingredientes}</td>
+      <td>{preparacion}</td>
+      <td>{categoria}</td>
       <td>
-        <Link to={`/administrador/editar`} className="me-lg-2 btn btn-warning">
+        <Link to={`/administrador/editar-producto/${id}`} className="me-lg-2 btn btn-warning">
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" className="py-1 m-1">
