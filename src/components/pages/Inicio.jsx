@@ -25,6 +25,7 @@ const Inicio = () => {
           style={{ width: "100%", objectFit: "cover" }}
         />
       </div>
+
       <Container>
         <div className="d-flex justify-content-between align-items-center categoria">
           <h3 className="my-4 mt-5 titulosFuente">CATEGORIAS POPULARES</h3>
@@ -37,6 +38,7 @@ const Inicio = () => {
         </div>
 
         <hr />
+
         <Row className="mb-4 mt-5 ms-4">
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-5 ">
@@ -49,6 +51,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3">
               <Card.Img variant="top" src={ensaladas} />
@@ -60,6 +63,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3">
               <Card.Img variant="top" src={salsas} />
@@ -71,6 +75,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3">
               <Card.Img variant="top" src={postres} />
@@ -82,6 +87,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3">
               <Card.Img variant="top" src={carnes} />
@@ -95,6 +101,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3">
               <Card.Img variant="top" src={entrada} />
@@ -110,11 +117,14 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
+
       <Container className="mb-md-2 mb-lg-5">
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">Nuevas Recetas</h3>
         </div>
+
         <hr />
+
         <section>
           <Carousel className="carrusel">
             <Carousel.Item>
@@ -129,6 +139,7 @@ const Inicio = () => {
                 </Button>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
               <Carousel.Caption className="mb-3">
@@ -137,6 +148,7 @@ const Inicio = () => {
                 </Button>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta3} alt="postres" />
               <Carousel.Caption className="mb-3">
@@ -148,16 +160,19 @@ const Inicio = () => {
           </Carousel>
         </section>
       </Container>
+
       <Container>
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="my-4 mt-5 titulosFuente">Nuestros Chefts</h3>
         </div>
+
         <h5>
           {
             "Cada uno de ellos tiene su lugar destacado en nuestro canal, dedicado a compartir las mejores recetas y técnicas de cocina contigo."
           }
         </h5>
         <hr />
+
         <Row className="mb-4 mt-5 ms-4">
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
@@ -169,6 +184,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
               <Card.Img variant="top" src={cheft2} alt="juan" />
@@ -179,6 +195,7 @@ const Inicio = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col xs={12} md={6} lg={4}>
             <Card style={{ width: "80%" }} className="mb-3 cheft-card">
               <Card.Img variant="top" src={cheft3} alt="natalia" />

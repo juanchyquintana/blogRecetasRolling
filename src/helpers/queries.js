@@ -19,7 +19,6 @@ const crearRecetaAPI = async (recetaNueva) => {
       },
       body: JSON.stringify(recetaNueva),
     });
-    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);
@@ -36,7 +35,6 @@ const editarReceta = async (recetaModificada, id) => {
       body: JSON.stringify(recetaModificada),
     });
 
-    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);

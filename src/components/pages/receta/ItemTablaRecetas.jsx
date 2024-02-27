@@ -2,8 +2,14 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ItemTablaRecetas = ({ receta }) => {
-
-  const { id, nombreReceta, imagen, descripcion, ingredientes, preparacion, categoria} = receta;
+  const {
+    id,
+    nombreReceta,
+    imagen,
+    descripcionBreve,
+    ingredientes,
+    categoria,
+  } = receta;
   return (
     <tr>
       <td>{id}</td>
@@ -11,21 +17,25 @@ const ItemTablaRecetas = ({ receta }) => {
       <td>
         <img
           src={imagen}
-          className="img-thumbnail"
+          className="img-thumbnail w-25"
           alt={nombreReceta}
         ></img>
       </td>
-      <td>{descripcion}</td>
+      <td>{descripcionBreve}</td>
       <td>{ingredientes}</td>
-      <td>{preparacion}</td>
       <td>{categoria}</td>
       <td>
-        <Link to={`/administrador/editar-producto/${id}`} className="me-lg-2 btn btn-warning">
-          <i className="bi bi-pencil-square"></i>
-        </Link>
-        <Button variant="danger" className="py-1 m-1">
-          <i className="bi bi-trash3"></i>
-        </Button>
+        <div className="d-flex gap-2">
+          <Link
+            to={`/administrador/editar-producto/${id}`}
+            className="btn btn-warning"
+          >
+            <i className="bi bi-pencil-square"></i>
+          </Link>
+          <Button variant="danger" className="py-1 m-1">
+            <i className="bi bi-trash3"></i>
+          </Button>
+        </div>
       </td>
     </tr>
   );
