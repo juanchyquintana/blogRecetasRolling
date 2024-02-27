@@ -1,11 +1,12 @@
-import { Container, Nav, NavLink, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
 import logoPriola from "../assets/logoDoñaPirola.png";
 
 const Header = () => {
   return (
     <Navbar expand="lg" className="bgNavFooter shadow">
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand as={Link}>
           <img
             src={logoPriola}
             alt="Logo Coffe"
@@ -17,16 +18,20 @@ const Header = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-center">
-            <NavLink className="nav-link colorSecundario" to="/">
+            <NavLink end className="nav-link colorSecundario" to="/">
               Inicio
             </NavLink>
-            <NavLink className="nav-link colorSecundario" to="/administrador">
+            <NavLink
+              end
+              className="nav-link colorSecundario"
+              to="/administrador"
+            >
               Administrador
             </NavLink>
-            <NavLink className="nav-link colorSecundario" to="/registrarse">
+            <NavLink end className="nav-link colorSecundario" to="/registrarse">
               Registro
             </NavLink>
-            <NavLink className="nav-link colorSecundario" to="/login">
+            <NavLink end className="nav-link colorSecundario" to="/login">
               Login
             </NavLink>
           </Nav>

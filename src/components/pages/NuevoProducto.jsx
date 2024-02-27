@@ -1,39 +1,105 @@
 import { Button, Container, Form } from "react-bootstrap";
-// import { crearProducto } from "../../helpers/queries";
+import {
+  crearRecetaAPI,
+  editarReceta,
+  obtenerRecetasAPI,
+} from "../../helpers/queries.js";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { crearRecetaAPI } from "../../helpers/queries";
+import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
-const NuevoProducto = () => {
+const NuevoProducto = ({ editar, titulo }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
+  const navegacion = useNavigate();
+
   const productoValidado = async (receta) => {
-    console.log(receta);
-    const respuesta = await crearRecetaAPI(receta);
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "Producto Creado",
-        text: `El ${receta.nombreReceta} se guardó correctamente`,
-        icon: "success",
-      });
-      reset();
+    if (editar) {
+      const respuesta = await editarReceta(receta, id);
+      const { nombreReceta } = receta;
+
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "Producto Editado",
+          text: `El ${nombreReceta} se editó correctamente`,
+          icon: "success",
+        });
+
+        navegacion("/administrador");
+      } else {
+        Swal.fire({
+          title: "Error al Editar el Producto",
+          text: `El ${nombreReceta} no pudo se puedo editar. Intente nuevamente`,
+          icon: "error",
+        });
+      }
     } else {
-      Swal.fire({
-        title: "Error al Crear el Producto",
-        text: `El ${receta.nombreReceta} no pudo ser cargado. Intente nuevamente`,
-        icon: "error",
-      });
+      const respuesta = await crearRecetaAPI(receta);
+      const { nombreReceta } = respuesta;
+
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Producto Creado",
+          text: `El ${nombreReceta} se guardó correctamente`,
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Error al Crear el Producto",
+          text: `El ${nombreReceta} no pudo ser cargado. Intente nuevamente`,
+          icon: "error",
+        });
+      }
     }
   };
+
+  const { id } = useParams();
+
+  const editarDatosReceta = async () => {
+    const respuesta = await obtenerRecetasAPI(id);
+
+    if (respuesta.status === 200) {
+      const resultadoAPI = await respuesta.json();
+      const {
+        nombreReceta,
+        imagen,
+        descripcionAmplia,
+        descripcionBreve,
+        categoria,
+        dificultad,
+        ingredientes,
+      } = resultadoAPI;
+
+      setValue("nombreReceta", nombreReceta);
+      setValue("ingredientes", ingredientes);
+      setValue("imagen", imagen);
+      setValue("categoria", categoria);
+      setValue("dificultad", dificultad);
+      setValue("descripcionAmplia", descripcionAmplia);
+      setValue("descripcionBreve", descripcionBreve);
+    }
+  };
+
+  useEffect(() => {
+    if (editar) {
+      editarDatosReceta();
+    }
+  }, []);
 
   return (
     <div>
       <Container>
+        <h2 className="display-4 mt-5">{titulo}</h2>
+        <hr />
+
         <section className=" bg-white shadow rounded-5  p-3 my-4">
           <Form onSubmit={handleSubmit(productoValidado)}>
             <Form.Group className="mb-3">
@@ -97,7 +163,7 @@ const NuevoProducto = () => {
               <Form.Control
                 type="url"
                 placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
-                {...register("url", {
+                {...register("imagen", {
                   required: "La Imagen es obligatoria",
                   pattern: {
                     value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
@@ -107,7 +173,9 @@ const NuevoProducto = () => {
               />
             </Form.Group>
 
-            <Form.Text className="text-danger">{errors.url?.message}</Form.Text>
+            <Form.Text className="text-danger">
+              {errors.imagen?.message}
+            </Form.Text>
 
             <Form.Group className="mb-3">
               <Form.Label className="fw-bolder fst-normal">
@@ -167,7 +235,7 @@ const NuevoProducto = () => {
                 as="textarea"
                 placeholder="Ej: Tacos de carne asada: deliciosos tacos mexicanos rellenos de jugosa carne asada, cebolla, cilantro y salsa."
                 className="w-100"
-                {...register("descrpcionBreve", {
+                {...register("descripcionBreve", {
                   required: "La Descripcion Breve es Obligatoria",
                   minLength: {
                     value: 5,
@@ -184,7 +252,7 @@ const NuevoProducto = () => {
             </Form.Group>
 
             <Form.Text className="text-danger">
-              {errors.descrpcionBreve?.message}
+              {errors.descripcionBreve?.message}
             </Form.Text>
 
             <Form.Group className="mb-3">

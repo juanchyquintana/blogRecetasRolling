@@ -1,8 +1,8 @@
-import { Button, Table } from "react-bootstrap";
-import ItemTablaRecetas from "./receta/ItemTablaRecetas";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { leerRecetasAPI } from "../../helpers/queries";
+import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ItemTablaRecetas from "./receta/ItemTablaRecetas";
 
 const Administrador = () => {
   const [recetas, setRecetas] = useState([]);
@@ -36,15 +36,17 @@ const Administrador = () => {
             <th>URL Imagen</th>
             <th>Descripción</th>
             <th>Ingredientes</th>
-            <th>Preparación</th>
             <th>Categoria</th>
             <th>Opciones</th>
           </tr>
         </thead>
         <tbody>
-          {
-            recetas.map ((receta)=><ItemTablaRecetas key={receta.id} receta={receta}></ItemTablaRecetas>)
-          }
+          {recetas.map((receta) => (
+            <ItemTablaRecetas
+              key={receta.id}
+              receta={receta}
+            />
+          ))}
         </tbody>
       </Table>
     </section>
