@@ -1,8 +1,13 @@
 import { Button, Container, Form } from "react-bootstrap";
-import { crearRecetaAPI } from "../../helpers/queries.js";
+import {
+  crearRecetaAPI,
+  editarReceta,
+  obtenerRecetasAPI,
+} from "../../helpers/queries.js";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
 const NuevoProducto = ({ editar, titulo }) => {
   const {
@@ -10,15 +15,16 @@ const NuevoProducto = ({ editar, titulo }) => {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
   const navegacion = useNavigate();
 
   const productoValidado = async (receta) => {
-    const respuesta = await crearRecetaAPI(receta);
-    const { nombreReceta } = respuesta;
-
     if (editar) {
+      const respuesta = await editarReceta(receta, id);
+      const { nombreReceta } = receta;
+
       if (respuesta.status === 200) {
         Swal.fire({
           title: "Producto Editado",
@@ -35,6 +41,9 @@ const NuevoProducto = ({ editar, titulo }) => {
         });
       }
     } else {
+      const respuesta = await crearRecetaAPI(receta);
+      const { nombreReceta } = respuesta;
+
       if (respuesta.status === 201) {
         Swal.fire({
           title: "Producto Creado",
@@ -51,6 +60,39 @@ const NuevoProducto = ({ editar, titulo }) => {
       }
     }
   };
+
+  const { id } = useParams();
+
+  const editarDatosReceta = async () => {
+    const respuesta = await obtenerRecetasAPI(id);
+
+    if (respuesta.status === 200) {
+      const resultadoAPI = await respuesta.json();
+      const {
+        nombreReceta,
+        imagen,
+        descripcionAmplia,
+        descripcionBreve,
+        categoria,
+        dificultad,
+        ingredientes,
+      } = resultadoAPI;
+
+      setValue("nombreReceta", nombreReceta);
+      setValue("ingredientes", ingredientes);
+      setValue("imagen", imagen);
+      setValue("categoria", categoria);
+      setValue("dificultad", dificultad);
+      setValue("descripcionAmplia", descripcionAmplia);
+      setValue("descripcionBreve", descripcionBreve);
+    }
+  };
+
+  useEffect(() => {
+    if (editar) {
+      editarDatosReceta();
+    }
+  }, []);
 
   return (
     <div>
@@ -193,7 +235,7 @@ const NuevoProducto = ({ editar, titulo }) => {
                 as="textarea"
                 placeholder="Ej: Tacos de carne asada: deliciosos tacos mexicanos rellenos de jugosa carne asada, cebolla, cilantro y salsa."
                 className="w-100"
-                {...register("descrpcionBreve", {
+                {...register("descripcionBreve", {
                   required: "La Descripcion Breve es Obligatoria",
                   minLength: {
                     value: 5,
@@ -210,7 +252,7 @@ const NuevoProducto = ({ editar, titulo }) => {
             </Form.Group>
 
             <Form.Text className="text-danger">
-              {errors.descrpcionBreve?.message}
+              {errors.descripcionBreve?.message}
             </Form.Text>
 
             <Form.Group className="mb-3">

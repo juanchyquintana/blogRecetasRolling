@@ -43,8 +43,13 @@ const editarReceta = async (recetaModificada, id) => {
   }
 };
 
-export {
-  leerRecetasAPI,
-  crearRecetaAPI,
-  editarReceta
-}
+const obtenerRecetasAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`${URL_Recetas}/${id}`);
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { leerRecetasAPI, crearRecetaAPI, editarReceta, obtenerRecetasAPI };
