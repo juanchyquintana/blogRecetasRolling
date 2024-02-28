@@ -104,6 +104,10 @@ font-size: 20px;
   width: 25%;
 }
 
+.tamanioLetraError{
+  font-size: 60px;
+}
+
 @media (min-width: 280px) and (max-width: 500px) {
   .categoria h3 {
     font-size: 16px;
@@ -134,6 +138,11 @@ font-size: 20px;
   .tamanioImagenReceta{
     width: 100%;
   }
+
+  .colorBoton{
+    background-color: #20403b;
+  }
+
 }
 @media (min-width: 500px) and (max-width: 770px) {
   .bannerProducto p{
