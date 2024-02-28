@@ -7,6 +7,8 @@ import DetalleProducto from "./components/pages/DetalleProducto";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Recetas from "./components/pages/receta/Recetas";
 import Login from "./components/pages/Login";
+import Error404 from "./components/pages/Error404";
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
           />
           <Route exact path="/recetas" element={<Recetas />} />
           <Route exact path="/recetas/:id" element={<DetalleProducto />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </BrowserRouter>
