@@ -27,3 +27,7 @@ Crea una aplicación web, que permita mostrar un blog de recetas de cocina en un
 ``` 
 git clone https://github.com/juanchyquintana/blogRecetasRolling
 ```
+
+3. npm install 
+4. npm run dev
+5. npx json-server db.json
