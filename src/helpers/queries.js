@@ -53,12 +53,37 @@ const obtenerRecetasAPI = async (id) => {
 const borrarRecetaAPI = async (id) => {
   try {
     const respuesta = await fetch(`${URL_Recetas}/${id}`, {
-      method: "DELETE" });
-    console.log(respuesta)
+      method: "DELETE",
+    });
+    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);
   }
 };
 
-export { leerRecetasAPI, crearRecetaAPI, editarReceta, obtenerRecetasAPI, borrarRecetaAPI };
+const userAdmin = {
+  correo: "correo@correo.com",
+  password: import.meta.env.USER_PASSWORD,
+};
+
+const login = (usuario) => {
+  if (
+    usuario.correo === userAdmin.correo &&
+    usuario.password === userAdmin.password
+  ) {
+    sessionStorage.setItem("adminKeyCoffe", JSON.stringify(usuario.correo));
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export {
+  leerRecetasAPI,
+  crearRecetaAPI,
+  editarReceta,
+  obtenerRecetasAPI,
+  borrarRecetaAPI,
+  login,
+};

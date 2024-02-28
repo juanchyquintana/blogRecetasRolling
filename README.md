@@ -1,11 +1,11 @@
-# Doña Priola - Blog de Recetas
+# Doña Pirola - Blog de Recetas
 
 Crea una aplicación web, que permita mostrar un blog de recetas de cocina en una página, desde otra pagina debo poder agregar, modificar o quitar las recetas y estas deben estar almacenadas en el localstorage o json-server.
 
 ## Enlace del Proyecto: 
 [Doña Pirola](https://github.com/juanchyquintana/blogRecetasRolling)
 
-![Logo del Proyecto](inserta_aqui_la_ruta_de_la_imagen_del_logo)
+![Logo del Proyecto](./src/assets/logoDoñaPirola.png)
 
 ## Participantes del Proyecto 😄
 - Sheyla Astorga ✅
