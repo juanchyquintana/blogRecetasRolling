@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Acerca de
@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Empleo
@@ -44,7 +44,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Blog
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Publicidad
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Inversionistas
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Provedores
@@ -82,7 +82,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   Ayuda
@@ -90,7 +90,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Error404"
                   className="link-secondary text-decoration-none"
                 >
                   App móvil Gratis

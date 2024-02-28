@@ -143,6 +143,12 @@ font-size: 20px;
     background-color: #20403b;
   }
 
+  .tamanioLetraError{
+    font-size: 30px;
+  }
+
+ 
+
 }
 @media (min-width: 500px) and (max-width: 770px) {
   .bannerProducto p{
