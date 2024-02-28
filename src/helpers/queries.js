@@ -64,7 +64,7 @@ const borrarRecetaAPI = async (id) => {
 
 const userAdmin = {
   correo: "correo@correo.com",
-  password: import.meta.env.USER_PASSWORD,
+  password: "password",
 };
 
 const login = (usuario) => {
@@ -72,7 +72,7 @@ const login = (usuario) => {
     usuario.correo === userAdmin.correo &&
     usuario.password === userAdmin.password
   ) {
-    sessionStorage.setItem("adminKeyCoffe", JSON.stringify(usuario.correo));
+    sessionStorage.setItem("adminKeyRecetas", JSON.stringify(usuario.correo));
     return true;
   } else {
     return false;
