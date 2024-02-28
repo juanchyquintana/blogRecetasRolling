@@ -41,13 +41,17 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          {recetas.map((receta) => (
-            <ItemTablaRecetas
-              key={receta.id}
-              receta={receta}
-              setRecetas={setRecetas}
-            />
-          ))}
+          {recetas && recetas.length > 0 ? (
+            recetas.map((receta) => (
+              <ItemTablaRecetas
+                key={receta.id}
+                receta={receta}
+                setRecetas={setRecetas}
+              />
+            ))
+          ) : (
+            <p className="text-center fw-bold">No hay recetas...</p>
+          )}
         </tbody>
       </Table>
     </section>
