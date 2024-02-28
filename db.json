@@ -1,14 +1,24 @@
 {
   "recetas": [
     {
-      "id": "e228",
-      "nombreReceta": "algo",
-      "ingredientes": "fjal, ajfkla, ajfjakl",
+      "id": "6dcb",
+      "nombreReceta": "jhlk",
+      "ingredientes": "kjkñhjñ, hkjhlkj",
+      "imagen": "https://images.pexels.com/photos/14704662/pexels-photo-14704662.jpeg",
+      "categoria": "entrada",
+      "dificultad": "facil",
+      "descripcionBreve": "jhj khl hlkh ",
+      "descripcionAmplia": "jhj jhlhlhkj hljhjklh hljjhljknhl hjklljgjgjhkjhl jhkljklggjhg jlhjkhlk"
+    },
+    {
+      "id": "36e7",
+      "nombreReceta": "fkjsahlff",
+      "ingredientes": "fajhksfj hjalfdlkashdjf lkjsadhflj",
       "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
-      "categoria": "postre",
+      "categoria": "entrada",
       "dificultad": "intermedio",
-      "descripcionBreve": "jkalhgkjahghkjfakljjjjjjasfhjkdsakbffffff",
-      "descripcionAmplia": "fakjjjkañkg gjkdafjagflgakja gakdjgajglkñajñg jjlñajdffkgjañ agjkjakdñg akgñfkgjkaljdfg kagñjakljgk gakjgalñkjgf"
+      "descripcionBreve": "fjalshf dshgdha fhlafjhlaljfha fsjalhhfal",
+      "descripcionAmplia": "fajhlahf hfjlafh afjlafjdhaf lafhalhf  afhfjhajf ajkhahfjal"
     }
   ]
 }

@@ -1,9 +1,9 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { borrarRecetaAPI } from "../../../helpers/queries";
+import { borrarRecetaAPI, leerRecetasAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
-const ItemTablaRecetas = ({ receta }) => {
+const ItemTablaRecetas = ({ receta, setRecetas }) => {
   const {
     id,
     nombreReceta,
@@ -26,12 +26,16 @@ const ItemTablaRecetas = ({ receta }) => {
     }).then( async (result) => {
       if (result.isConfirmed) {
         const respuesta = await borrarRecetaAPI(receta.id);
-        if(respuesta === 200){
+        if(respuesta.status === 200){
           Swal.fire({
             title: "Receta eliminada",
             text: `La receta "${receta.nombreReceta}" fue eliminada correctamente`,
             icon: "success"
           });
+
+          const listaRecetas = await leerRecetasAPI();
+          setRecetas(listaRecetas);
+
         } else {
           Swal.fire({
             title: "Ocurrio un error",
