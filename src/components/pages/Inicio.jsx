@@ -12,7 +12,6 @@ import { leerRecetasAPI } from "../../helpers/queries";
 import ItemRecetas from "./receta/ItemRecetas";
 
 const Inicio = () => {
-
   const [recetas, setRecetas] = useState([]);
 
   useEffect(() => {
@@ -54,12 +53,13 @@ const Inicio = () => {
         <hr />
 
         <Row className="mb-4 mt-5 ms-4">
-            {recetas.slice(0, 3).map( receta => (
-              <ItemRecetas 
-                key={receta.id}
-                receta={receta}
-              />
-            ))}
+          {recetas && recetas.length > 0 ? (
+            recetas
+              .slice(0, 3)
+              .map((receta) => <ItemRecetas key={receta.id} receta={receta} />)
+          ) : (
+            <p className="text-center fw-bold">No hay recetas disponibles</p>
+          )}
         </Row>
       </Container>
 
@@ -79,7 +79,10 @@ const Inicio = () => {
                 alt="Nuevas recetas comida"
               />
               <Carousel.Caption className="mb-3">
-                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
+                <Link
+                  to={`/recetas`}
+                  className="btn btn-success boton-carrusel text-light"
+                >
                   Ver Recetas
                 </Link>
               </Carousel.Caption>
@@ -88,7 +91,10 @@ const Inicio = () => {
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta2} alt="comidas" />
               <Carousel.Caption className="mb-3">
-                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
+                <Link
+                  to={`/recetas`}
+                  className="btn btn-success boton-carrusel text-light"
+                >
                   Ver Recetas
                 </Link>
               </Carousel.Caption>
@@ -97,14 +103,16 @@ const Inicio = () => {
             <Carousel.Item>
               <img className="img-fluid" src={nuevaReceta3} alt="postres" />
               <Carousel.Caption className="mb-3">
-                <Link to={`/recetas`} className="btn btn-success boton-carrusel text-light">
+                <Link
+                  to={`/recetas`}
+                  className="btn btn-success boton-carrusel text-light"
+                >
                   Ver Recetas
                 </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </section>
-        
       </Container>
 
       <Container>
