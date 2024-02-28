@@ -1,14 +1,14 @@
 {
   "recetas": [
     {
-      "id": "6dcb",
-      "nombreReceta": "jhlk",
-      "ingredientes": "kjkñhjñ, hkjhlkj",
+      "nombreReceta": "ensalada",
+      "ingredientes": "lechuga, tomate",
       "imagen": "https://images.pexels.com/photos/14704662/pexels-photo-14704662.jpeg",
       "categoria": "entrada",
       "dificultad": "facil",
-      "descripcionBreve": "jhj khl hlkh ",
-      "descripcionAmplia": "jhj jhlhlhkj hljhjklh hljjhljknhl hjklljgjgjhkjhl jhkljklggjhg jlhjkhlk"
+      "descripcionBreve": "rica ensalada de lechuga y tomate",
+      "descripcionAmplia": "jhj jhlhlhkj hljhjklh hljjhljknhl hjklljgjgjhkjhl jhkljklggjhg jlhjkhlk",
+      "id": "6dcb"
     },
     {
       "id": "36e7",
@@ -19,6 +19,16 @@
       "dificultad": "intermedio",
       "descripcionBreve": "fjalshf dshgdha fhlafjhlaljfha fsjalhhfal",
       "descripcionAmplia": "fajhlahf hfjlafh afjlafjdhaf lafhalhf  afhfjhajf ajkhahfjal"
+    },
+    {
+      "id": "fb03",
+      "nombreReceta": "hfaghjkghal",
+      "ingredientes": "afkjakhl",
+      "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
+      "categoria": "postre",
+      "dificultad": "dificil",
+      "descripcionBreve": "fafhla fhlahfjal",
+      "descripcionAmplia": "falhf fhalkfh ajkaflhjal  ahdfaljdf lfhjadlfhajhla afjdhaslfhja ahfaljhf lafjhal"
     }
   ]
 }

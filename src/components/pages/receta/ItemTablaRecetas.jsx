@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { borrarRecetaAPI, leerRecetasAPI } from "../../../helpers/queries";
+
 import Swal from "sweetalert2";
 
 const ItemTablaRecetas = ({ receta, setRecetas }) => {
@@ -55,7 +56,7 @@ const ItemTablaRecetas = ({ receta, setRecetas }) => {
       <td>
         <img
           src={imagen}
-          className="img-thumbnail w-25"
+          className="img-thumbnail tamanioImagenReceta"
           alt={nombreReceta}
         ></img>
       </td>
@@ -66,11 +67,11 @@ const ItemTablaRecetas = ({ receta, setRecetas }) => {
         <div className="d-flex gap-2">
           <Link
             to={`/administrador/editar-producto/${id}`}
-            className="btn btn-warning"
+            className="btn btn-warning my-1"
           >
             <i className="bi bi-pencil-square"></i>
           </Link>
-          <Button variant="danger" className="py-1 m-1" onClick={borrarReceta}>
+          <Button variant="danger" className="py-1 my-1" onClick={borrarReceta}>
             <i className="bi bi-trash3"></i>
           </Button>
         </div>
