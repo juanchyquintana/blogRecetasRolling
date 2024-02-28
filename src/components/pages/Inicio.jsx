@@ -1,8 +1,5 @@
 import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import banner from "../../assets/banner.png";
-import pastas from "../../assets/lasagna.jpg";
-import ensaladas from "../../assets/ensalada.jpg";
-import entrada from "../../assets/entrada.jpg";
 import nuevaReceta1 from "../../assets/nuevaReceta1.jpg";
 import nuevaReceta2 from "../../assets/nuevaReceta2.jpg";
 import nuevaReceta3 from "../../assets/nuevaReceta3.jpg";

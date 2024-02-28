@@ -1,4 +1,4 @@
-import logoPriola from "../assets/logoDoñaPirola.png";
+import logoPirola from "../assets/logoDoñaPirola.png";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
 
           <div className="col-md-12 col-lg-3 text-center text-lg-start my-3 mb-lg-0">
             <img
-              src={logoPriola}
+              src={logoPirola}
               alt="Logo Coffe"
               className="img-fluid"
               width={150}

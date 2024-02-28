@@ -1,5 +1,4 @@
 import { Container, Col, Row } from "react-bootstrap";
-import lasagna from "../../assets/lasagna.jpg";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { leerRecetasAPI } from "../../helpers/queries";
