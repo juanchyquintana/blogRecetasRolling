@@ -1,24 +1,34 @@
 {
   "recetas": [
     {
-      "nombreReceta": "ensalada",
-      "ingredientes": "lechuga, tomate",
-      "imagen": "https://images.pexels.com/photos/14704662/pexels-photo-14704662.jpeg",
-      "categoria": "entrada",
+      "nombreReceta": "ensalada césar",
+      "ingredientes": " lechuga romana, aderezo César, croutones, queso parmesano rallado y a menudo pollo a la parrilla.",
+      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2018/06/Ensalada-cesar.jpg",
+      "categoria": "vegetariano",
       "dificultad": "facil",
-      "descripcionBreve": "rica ensalada de lechuga y tomate",
-      "descripcionAmplia": "jhj jhlhlhkj hljhjklh hljjhljknhl hjklljgjgjhkjhl jhkljklggjhg jlhjkhlk",
+      "descripcionBreve": "La ensalada César es una clásica ensalada",
+      "descripcionAmplia": " A menudo se sirve con trozos de pollo a la parrilla para agregar proteínas. La lechuga se mezcla con el aderezo cremoso, se espolvorea con queso parmesano y se adorna con crujientes croutones, creando una combinación sabrosa y satisfactoria.",
       "id": "6dcb"
     },
     {
-      "id": "36e7",
-      "nombreReceta": "fkjsahlff",
-      "ingredientes": "fajhksfj hjalfdlkashdjf lkjsadhflj",
-      "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
-      "categoria": "entrada",
+      "nombreReceta": "Torta Chocolate",
+      "ingredientes": "Harina de trigo,Azúcar,Cacao en polvo,polvo de hornear,Sal,Huevos,Leche",
+      "imagen": "https://canalcocina.es/medias/_cache/zoom-d13078709a6c8f4714a40d88ec409af8-920-518.jpeg",
+      "categoria": "postre",
       "dificultad": "intermedio",
-      "descripcionBreve": "fjalshf dshgdha fhlafjhlaljfha fsjalhhfal",
-      "descripcionAmplia": "fajhlahf hfjlafh afjlafjdhaf lafhalhf  afhfjhajf ajkhahfjal"
+      "descripcionBreve": "Es un delicioso postre ",
+      "descripcionAmplia": " Su sabor característico proviene del cacao en polvo, y suele llevar ingredientes como harina, azúcar, huevos, leche y aceite o mantequilla. Una vez horneada, la torta adquiere una textura suave y jugosa.",
+      "id": "36e7"
+    },
+    {
+      "id": "19af",
+      "nombreReceta": "Ravioles",
+      "ingredientes": "tomate y queso de cabra con manteca de hierbas",
+      "imagen": "https://www.hazteveg.com/img/recipes/full/201305/R16-77309.jpg",
+      "categoria": "platoPrincipal",
+      "dificultad": "intermedio",
+      "descripcionBreve": "exquisita combinación ",
+      "descripcionAmplia": " La pasta, ya sea fresca o seca, envuelve esta mezcla sabrosa que combina la acidez del tomate con la cremosidad del queso de cabra"
     }
   ]
 }
