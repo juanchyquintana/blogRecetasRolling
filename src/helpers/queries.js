@@ -50,4 +50,15 @@ const obtenerRecetasAPI = async (id) => {
   }
 };
 
-export { leerRecetasAPI, crearRecetaAPI, editarReceta, obtenerRecetasAPI };
+const borrarRecetaAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`${URL_Recetas}/${id}`, {
+      method: "DELETE" });
+    console.log(respuesta)
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { leerRecetasAPI, crearRecetaAPI, editarReceta, obtenerRecetasAPI, borrarRecetaAPI };

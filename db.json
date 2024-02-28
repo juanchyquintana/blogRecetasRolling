@@ -1,14 +1,14 @@
 {
   "recetas": [
     {
-      "nombreReceta": "tostada francesa",
-      "ingredientes": "2 tostadas, huevo, azucar y sal.",
-      "imagen": "https://images.pexels.com/photos/14122642/pexels-photo-14122642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "desayuno",
-      "dificultad": "facil",
-      "descripcionBreve": "sadasdaddasdsdasdasdas",
-      "descripcionAmplia": "sadasdaddasdsdasdasdassadasdaddasdsdasdasdassadasdaddasdsdasdasdassadasdaddasdsdasdasdassadasdaddasdsdasdasdassadasdaddasdsdasdasdas",
-      "id": "e688"
+      "id": "e228",
+      "nombreReceta": "algo",
+      "ingredientes": "fjal, ajfkla, ajfjakl",
+      "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
+      "categoria": "postre",
+      "dificultad": "intermedio",
+      "descripcionBreve": "jkalhgkjahghkjfakljjjjjjasfhjkdsakbffffff",
+      "descripcionAmplia": "fakjjjkañkg gjkdafjagflgakja gakdjgajglkñajñg jjlñajdffkgjañ agjkjakdñg akgñfkgjkaljdfg kagñjakljgk gakjgalñkjgf"
     }
   ]
 }
