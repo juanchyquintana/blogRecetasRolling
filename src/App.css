@@ -100,6 +100,10 @@
 font-size: 20px;
 }
 
+.tamanioImagenReceta{
+  width: 25%;
+}
+
 @media (min-width: 280px) and (max-width: 500px) {
   .categoria h3 {
     font-size: 16px;
@@ -126,10 +130,23 @@ font-size: 20px;
   .listaIngredientes h3{
     font-size:20px ;
   }
+  
+  .tamanioImagenReceta{
+    width: 100%;
+  }
 }
 @media (min-width: 500px) and (max-width: 770px) {
   .bannerProducto p{
     font-size: 15px;
     padding: 1;
+  }
+
+  .tamanioImagenReceta{
+    width: 100%;
+  }
+}
+@media (min-width: 770px) and (max-width: 991px) {
+  .tamanioImagenReceta{
+    width: 100%;
   }
 }

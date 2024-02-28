@@ -45,6 +45,7 @@ const Administrador = () => {
             <ItemTablaRecetas
               key={receta.id}
               receta={receta}
+              setRecetas={setRecetas}
             />
           ))}
         </tbody>
